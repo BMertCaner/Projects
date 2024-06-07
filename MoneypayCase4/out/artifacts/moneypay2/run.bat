@@ -1,0 +1,2 @@
+java --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED --add-opens java.base/java.util.regex=ALL-UNNAMED --add-opens java.base/java.security=ALL-UNNAMED --add-exports java.base/sun.net.spi=ALL-UNNAMED --add-opens java.base/sun.net.spi=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED -jar intellijtest3.jar
+pause
