@@ -106,6 +106,11 @@ public class MainPage {
         element.click();
     }
 
+    public static void clearText(WebElement element) {
+        element.clear();
+    }
+
+
     public static void moveToElement(WebDriver driver,WebElement element){
 
         Actions actions = new Actions(driver);

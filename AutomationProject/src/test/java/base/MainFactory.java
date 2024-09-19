@@ -21,10 +21,12 @@ public class MainFactory {
                 //"--tags", "@service",
                 //"--tags", "@firefox",
                 //"--tags", "@migros",
-                "--tags", "@migros or @service",
+                "--tags", "@ziraat",
+                //"--tags", "@migros or @service",
                 //"--features", "src/test/java/featurefiles/Migros.feature"
                 //"src/test/java/featurefiles/Migros.feature"
-                "classpath:featurefiles/Migros.feature"
+                //"classpath:featurefiles/Migros.feature"
+                "classpath:featurefiles/Ziraat.feature"
                 //"classpath:featurefiles/Hepsiburada.feature"
         };
 
