@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"21.0.1+12-LTS-29"},"os":{"name":"Windows 8.1"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1726765786","nanos":371861000}}},{"source":{"uri":"classpath:featurefiles/Migros.feature","data":"\r\nFeature: Migros Product\r\n  Description: The purpose of this feature is to test sort method for pet shop product\r\n\r\n  @chrome @migros\r\n  Scenario Outline: : check the product at pet shop - chrome\r\n\r\n    Given I launch \"\u003cbrowser\u003e\" browser with migros\r\n    # Then I verify that the migros web site is presented on the page\r\n\r\n    # When I click warning\r\n    When I click pet shop products\r\n    Then I verify that pet shop products is presented on the page\r\n\r\n    When I click low price sort button on the page\r\n    Then I verify that low price is sorted on the page\r\n\r\n\r\n    Examples:\r\n      | browser |\r\n      | chrome |\r\n\r\n\r\n  @firefox @migros\r\n  Scenario Outline: : check the product at pet shop - firefox\r\n\r\n    Given I launch \"\u003cbrowser\u003e\" browser with migros\r\n    # Then I verify that the migros web site is presented on the page\r\n\r\n    # When I click warning\r\n    When I click pet shop products\r\n    Then I verify that pet shop products is presented on the page\r\n\r\n    When I click low price sort button on the page\r\n    Then I verify that low price is sorted on the page\r\n\r\n\r\n    Examples:\r\n      | browser |\r\n      | firefox |\r\n\r\n  @service\r\n  Scenario Outline: : check the product service at url:\r\n\r\n    Given I set the service url with \"\u003cservice url\u003e\"\r\n    When I call the service with type \"\u003cbody\u003e\"\"\u003cservice type\u003e\"\r\n    Then I verify that the response code \"\u003cresponse code\u003e\" is correct\r\n    Then I verify that the response body \"\u003cresponse body\u003e\" is correct\r\n\r\n    Examples:\r\n      | service url | body | service type | response code | response body |\r\n      | https://www.migros.com.tr/migroskop-urunleri-dt-3 | | GET | 200 | aaa |\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"classpath:featurefiles/Migros.feature","feature":{"location":{"line":2,"column":1},"language":"en","keyword":"Feature","name":"Migros Product","description":"  Description: The purpose of this feature is to test sort method for pet shop product","children":[{"scenario":{"location":{"line":6,"column":3},"tags":[{"location":{"line":5,"column":3},"name":"@chrome","id":"9c5f71c1-16e6-46f5-9b01-7f0e796b2fbd"},{"location":{"line":5,"column":11},"name":"@migros","id":"69c978cb-9e78-415a-b7ff-1654ff9e30ef"}],"keyword":"Scenario Outline","name":": check the product at pet shop - chrome","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"I launch \"\u003cbrowser\u003e\" browser with migros","id":"8d2f5c12-0417-488b-9e12-897d0c853000"},{"location":{"line":12,"column":5},"keyword":"When ","text":"I click pet shop products","id":"88c248a4-727f-486f-8462-5fadaf44f58d"},{"location":{"line":13,"column":5},"keyword":"Then ","text":"I verify that pet shop products is presented on the page","id":"5ff6c53f-920e-4c08-bf37-e1fb0020de79"},{"location":{"line":15,"column":5},"keyword":"When ","text":"I click low price sort button on the page","id":"8b8034e4-2e02-4ac0-874f-c2929aa091e3"},{"location":{"line":16,"column":5},"keyword":"Then ","text":"I verify that low price is sorted on the page","id":"2cc5cb5b-1f8c-4d29-b02f-23312586e142"}],"examples":[{"location":{"line":19,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":20,"column":7},"cells":[{"location":{"line":20,"column":9},"value":"browser"}],"id":"d3fde0c2-17bb-4009-8fa0-0c5a282a8761"},"tableBody":[{"location":{"line":21,"column":7},"cells":[{"location":{"line":21,"column":9},"value":"chrome"}],"id":"93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"}],"id":"751f9192-909c-42bd-910f-b73809dc5d8c"}],"id":"49bcd044-f2de-4e4f-ba3e-335ef22e4a13"}},{"scenario":{"location":{"line":25,"column":3},"tags":[{"location":{"line":24,"column":3},"name":"@firefox","id":"1a4b5853-c534-440a-93a4-85a4dc1637ec"},{"location":{"line":24,"column":12},"name":"@migros","id":"d99b2447-9845-42a9-b87d-3096db7c00d8"}],"keyword":"Scenario Outline","name":": check the product at pet shop - firefox","steps":[{"location":{"line":27,"column":5},"keyword":"Given ","text":"I launch \"\u003cbrowser\u003e\" browser with migros","id":"0ab3cc3e-9417-4ac8-aa17-0c0f51e3d20d"},{"location":{"line":31,"column":5},"keyword":"When ","text":"I click pet shop products","id":"94c78e88-ad83-4262-aaf2-1c792079c831"},{"location":{"line":32,"column":5},"keyword":"Then ","text":"I verify that pet shop products is presented on the page","id":"25f61b57-9853-4ff4-a88f-91f7338e0966"},{"location":{"line":34,"column":5},"keyword":"When ","text":"I click low price sort button on the page","id":"e0f68536-8513-41ac-a354-6ac4a9c21b1d"},{"location":{"line":35,"column":5},"keyword":"Then ","text":"I verify that low price is sorted on the page","id":"c8517dda-0dd1-45e6-b1bf-fd3977326e27"}],"examples":[{"location":{"line":38,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":39,"column":7},"cells":[{"location":{"line":39,"column":9},"value":"browser"}],"id":"fdb3ecf2-6376-4e37-8821-7c470620aa12"},"tableBody":[{"location":{"line":40,"column":7},"cells":[{"location":{"line":40,"column":9},"value":"firefox"}],"id":"29236969-2b68-41b6-9f62-c04ac705ef96"}],"id":"50a12af1-6375-4722-82de-cf7e1eb7cdaf"}],"id":"d03d1a14-2105-43ea-b368-720acb8c69d0"}},{"scenario":{"location":{"line":43,"column":3},"tags":[{"location":{"line":42,"column":3},"name":"@service","id":"60aace45-b556-4554-a6ae-7ff0cb2e5f7f"}],"keyword":"Scenario Outline","name":": check the product service at url:","steps":[{"location":{"line":45,"column":5},"keyword":"Given ","text":"I set the service url with \"\u003cservice url\u003e\"","id":"30472d8b-ae91-4eaa-ba37-3d69dcfe877a"},{"location":{"line":46,"column":5},"keyword":"When ","text":"I call the service with type \"\u003cbody\u003e\"\"\u003cservice type\u003e\"","id":"c31d04f1-85e8-42bf-8d5e-2362c261e388"},{"location":{"line":47,"column":5},"keyword":"Then ","text":"I verify that the response code \"\u003cresponse code\u003e\" is correct","id":"79a38f9f-dbd7-4a61-b4e8-360fad39fa01"},{"location":{"line":48,"column":5},"keyword":"Then ","text":"I verify that the response body \"\u003cresponse body\u003e\" is correct","id":"c686e359-dcc7-4a72-b7c4-2f4bad04fbff"}],"examples":[{"location":{"line":50,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":51,"column":7},"cells":[{"location":{"line":51,"column":9},"value":"service url"},{"location":{"line":51,"column":23},"value":"body"},{"location":{"line":51,"column":30},"value":"service type"},{"location":{"line":51,"column":45},"value":"response code"},{"location":{"line":51,"column":61},"value":"response body"}],"id":"6e9cd7d2-41a8-4207-b6f1-c5f801e50c9e"},"tableBody":[{"location":{"line":52,"column":7},"cells":[{"location":{"line":52,"column":9},"value":"https://www.migros.com.tr/migroskop-urunleri-dt-3"},{"location":{"line":52,"column":61}},{"location":{"line":52,"column":63},"value":"GET"},{"location":{"line":52,"column":69},"value":"200"},{"location":{"line":52,"column":75},"value":"aaa"}],"id":"99dc54b8-2a00-446b-9786-fe938a5f616a"}],"id":"4a4c9990-8d19-42e5-bba5-2954a0e6db75"}],"id":"3ab03407-f354-4cbb-b571-96e91800f675"}}]},"comments":[{"location":{"line":9,"column":1},"text":"    # Then I verify that the migros web site is presented on the page"},{"location":{"line":11,"column":1},"text":"    # When I click warning"},{"location":{"line":28,"column":1},"text":"    # Then I verify that the migros web site is presented on the page"},{"location":{"line":30,"column":1},"text":"    # When I click warning"}]}},{"pickle":{"id":"ebc50fab-6e08-47c5-85ce-e1fa18203108","uri":"classpath:featurefiles/Migros.feature","name":": check the product at pet shop - chrome","language":"en","steps":[{"text":"I launch \"chrome\" browser with migros","id":"94b51fb2-dd3f-4cb1-9e79-b39c6da4561f","astNodeIds":["8d2f5c12-0417-488b-9e12-897d0c853000","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]},{"text":"I click pet shop products","id":"47a73da0-75ce-4ea6-8e3a-a064f69ae9de","astNodeIds":["88c248a4-727f-486f-8462-5fadaf44f58d","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]},{"text":"I verify that pet shop products is presented on the page","id":"60c8d928-9a53-4b57-860d-33602c5dc416","astNodeIds":["5ff6c53f-920e-4c08-bf37-e1fb0020de79","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]},{"text":"I click low price sort button on the page","id":"02c366b9-d0c5-43e2-af29-19ae47f17075","astNodeIds":["8b8034e4-2e02-4ac0-874f-c2929aa091e3","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]},{"text":"I verify that low price is sorted on the page","id":"3059e91e-e314-47ab-96a1-39f4d142e58a","astNodeIds":["2cc5cb5b-1f8c-4d29-b02f-23312586e142","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]}],"tags":[{"name":"@chrome","astNodeId":"9c5f71c1-16e6-46f5-9b01-7f0e796b2fbd"},{"name":"@migros","astNodeId":"69c978cb-9e78-415a-b7ff-1654ff9e30ef"}],"astNodeIds":["49bcd044-f2de-4e4f-ba3e-335ef22e4a13","93fdbc9f-c489-4ef9-a11e-4eed26b46ebb"]}},{"pickle":{"id":"4e31d48e-4c88-4060-9d00-520a3c428a35","uri":"classpath:featurefiles/Migros.feature","name":": check the product at pet shop - firefox","language":"en","steps":[{"text":"I launch \"firefox\" browser with migros","id":"6a7b9c10-b1c1-4f47-9222-b61c236cbfbc","astNodeIds":["0ab3cc3e-9417-4ac8-aa17-0c0f51e3d20d","29236969-2b68-41b6-9f62-c04ac705ef96"]},{"text":"I click pet shop products","id":"cd619442-47a2-4997-919c-f880448175c6","astNodeIds":["94c78e88-ad83-4262-aaf2-1c792079c831","29236969-2b68-41b6-9f62-c04ac705ef96"]},{"text":"I verify that pet shop products is presented on the page","id":"96d0ac8b-6c98-4da2-a8fb-aecf0ff2d726","astNodeIds":["25f61b57-9853-4ff4-a88f-91f7338e0966","29236969-2b68-41b6-9f62-c04ac705ef96"]},{"text":"I click low price sort button on the page","id":"488b2b4b-41b7-47bb-a538-7ac179aef9d9","astNodeIds":["e0f68536-8513-41ac-a354-6ac4a9c21b1d","29236969-2b68-41b6-9f62-c04ac705ef96"]},{"text":"I verify that low price is sorted on the page","id":"165a5519-063a-44a1-8f2f-358ec4b31d4f","astNodeIds":["c8517dda-0dd1-45e6-b1bf-fd3977326e27","29236969-2b68-41b6-9f62-c04ac705ef96"]}],"tags":[{"name":"@firefox","astNodeId":"1a4b5853-c534-440a-93a4-85a4dc1637ec"},{"name":"@migros","astNodeId":"d99b2447-9845-42a9-b87d-3096db7c00d8"}],"astNodeIds":["d03d1a14-2105-43ea-b368-720acb8c69d0","29236969-2b68-41b6-9f62-c04ac705ef96"]}},{"pickle":{"id":"d7789937-491c-4373-a4f4-72272f81e15c","uri":"classpath:featurefiles/Migros.feature","name":": check the product service at url:","language":"en","steps":[{"text":"I set the service url with \"https://www.migros.com.tr/migroskop-urunleri-dt-3\"","id":"3c98fbcf-6608-4b4d-b459-b7613f732b38","astNodeIds":["30472d8b-ae91-4eaa-ba37-3d69dcfe877a","99dc54b8-2a00-446b-9786-fe938a5f616a"]},{"text":"I call the service with type \"\"\"GET\"","id":"49052f8f-2a49-4437-b3e2-2bd0adacdd3d","astNodeIds":["c31d04f1-85e8-42bf-8d5e-2362c261e388","99dc54b8-2a00-446b-9786-fe938a5f616a"]},{"text":"I verify that the response code \"200\" is correct","id":"979d40ec-10e7-43b2-a607-eb8a6f215b93","astNodeIds":["79a38f9f-dbd7-4a61-b4e8-360fad39fa01","99dc54b8-2a00-446b-9786-fe938a5f616a"]},{"text":"I verify that the response body \"aaa\" is correct","id":"5e8992df-b6b8-4d6b-8b5f-243a6abb93fd","astNodeIds":["c686e359-dcc7-4a72-b7c4-2f4bad04fbff","99dc54b8-2a00-446b-9786-fe938a5f616a"]}],"tags":[{"name":"@service","astNodeId":"60aace45-b556-4554-a6ae-7ff0cb2e5f7f"}],"astNodeIds":["3ab03407-f354-4cbb-b571-96e91800f675","99dc54b8-2a00-446b-9786-fe938a5f616a"]}},{"testCase":{"id":"9d61d0b3-587a-4b63-8535-357b0a21e251","pickleId":"ebc50fab-6e08-47c5-85ce-e1fa18203108","testSteps":[{"id":"d2882eb0-608a-48ed-bdcb-65ebeb6201c1","hookId":"86dc6857-d0ea-4f34-ba45-dc0366a7a215"},{"id":"704aaa4f-e27d-4838-a5dd-6101ceedf333","pickleStepId":"94b51fb2-dd3f-4cb1-9e79-b39c6da4561f","stepDefinitionIds":["0770ffef-ba0f-43cc-850d-441680dc7f9e"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":10,"value":"chrome"}}]}]},{"id":"b3781703-8d74-45de-a70a-09e5c98ca5d5","pickleStepId":"47a73da0-75ce-4ea6-8e3a-a064f69ae9de","stepDefinitionIds":["ab9eae1f-b121-420f-812e-94c9fce49598"],"stepMatchArgumentsLists":[{}]},{"id":"1d572c62-504b-4f6b-baa5-cc8f8aecd2af","pickleStepId":"60c8d928-9a53-4b57-860d-33602c5dc416","stepDefinitionIds":["ff775d3c-f810-43d6-b6a4-081266dcb910"],"stepMatchArgumentsLists":[{}]},{"id":"5731cbd8-5fab-4884-8e05-0c9a0185f425","pickleStepId":"02c366b9-d0c5-43e2-af29-19ae47f17075","stepDefinitionIds":["13176e23-7787-4040-b61c-b0ba156f2046"],"stepMatchArgumentsLists":[{}]},{"id":"96cf1378-8470-4e8d-b186-33fe5dbd7f46","pickleStepId":"3059e91e-e314-47ab-96a1-39f4d142e58a","stepDefinitionIds":["7ff8aa6b-2765-4d3a-8875-1ed9773d5849"],"stepMatchArgumentsLists":[{}]},{"id":"53170037-ae33-4902-81bb-a75a5b4cf533","hookId":"7c27edc8-95c8-40df-a780-8ba51572a216"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1726765786","nanos":891227600},"testCaseId":"9d61d0b3-587a-4b63-8535-357b0a21e251","id":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765786","nanos":895229200},"testStepId":"d2882eb0-608a-48ed-bdcb-65ebeb6201c1","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"1","nanos":488584800}},"timestamp":{"seconds":"1726765788","nanos":383814000},"testStepId":"d2882eb0-608a-48ed-bdcb-65ebeb6201c1","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765788","nanos":388805000},"testStepId":"704aaa4f-e27d-4838-a5dd-6101ceedf333","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d109.0.5414.168)\nBuild info: version: \u0027unknown\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027MERT-PC\u0027, ip: \u0027192.168.0.13\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u002721.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\\Users\\mert\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:3752}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 28ab1be032116b56e22f82b748134297\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)\r\n\tat pages.MainPage.MaximizeScreen(MainPage.java:102)\r\n\tat testcases.MigrosPetShopLowSortTest.iLaunchChromeBrowserWithMigros(MigrosPetShopLowSortTest.java:24)\r\n\tat ✽.I launch \"chrome\" browser with migros(classpath:featurefiles/Migros.feature:8)\r\n","duration":{"seconds":"1","nanos":620503900}},"timestamp":{"seconds":"1726765790","nanos":9308900},"testStepId":"704aaa4f-e27d-4838-a5dd-6101ceedf333","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765790","nanos":15300400},"testStepId":"b3781703-8d74-45de-a70a-09e5c98ca5d5","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1726765790","nanos":15300400},"testStepId":"b3781703-8d74-45de-a70a-09e5c98ca5d5","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765790","nanos":16300500},"testStepId":"1d572c62-504b-4f6b-baa5-cc8f8aecd2af","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1726765790","nanos":16300500},"testStepId":"1d572c62-504b-4f6b-baa5-cc8f8aecd2af","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765790","nanos":16300500},"testStepId":"5731cbd8-5fab-4884-8e05-0c9a0185f425","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1726765790","nanos":16300500},"testStepId":"5731cbd8-5fab-4884-8e05-0c9a0185f425","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765790","nanos":17300600},"testStepId":"96cf1378-8470-4e8d-b186-33fe5dbd7f46","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1726765790","nanos":17300600},"testStepId":"96cf1378-8470-4e8d-b186-33fe5dbd7f46","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepStarted":{"timestamp":{"seconds":"1726765790","nanos":18301500},"testStepId":"53170037-ae33-4902-81bb-a75a5b4cf533","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d109.0.5414.168)\nBuild info: version: \u0027unknown\u0027, revision: \u0027unknown\u0027, time: \u0027unknown\u0027\nSystem info: host: \u0027MERT-PC\u0027, ip: \u0027192.168.0.13\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u002721.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.168, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\\Users\\mert\\AppData\\Local...}, goog:chromeOptions: {debuggerAddress: localhost:3752}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 28ab1be032116b56e22f82b748134297\r\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat testcases.MigrosPetShopLowSortTest.beforeAfter(MigrosPetShopLowSortTest.java:102)\r\n","duration":{"nanos":4011900}},"timestamp":{"seconds":"1726765790","nanos":22313400},"testStepId":"53170037-ae33-4902-81bb-a75a5b4cf533","testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testCaseFinished":{"timestamp":{"seconds":"1726765790","nanos":25307100},"testCaseStartedId":"5d03f190-eddd-4953-bf98-d122d9d4a963"}},{"testCase":{"id":"40c02c08-bb13-480a-aea4-fd9a6a0d1952","pickleId":"4e31d48e-4c88-4060-9d00-520a3c428a35","testSteps":[{"id":"deb4820e-628d-4b59-86ba-4b4ec9d66eb5","hookId":"c7961c6c-8260-4722-b2d6-622df8d9eb9b"},{"id":"afae7867-43d7-46e6-9c15-8c998bbb12fe","pickleStepId":"6a7b9c10-b1c1-4f47-9222-b61c236cbfbc","stepDefinitionIds":["c81bbe42-b19a-4f64-b3b2-5e67dbcae8ba"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":10,"value":"firefox"}}]}]},{"id":"c91527e0-2005-424e-887c-d4773c399af7","pickleStepId":"cd619442-47a2-4997-919c-f880448175c6","stepDefinitionIds":["121dabd4-c7e3-4247-b5db-631e0914b2bc"],"stepMatchArgumentsLists":[{}]},{"id":"b745c73e-a65f-4c77-bb43-687377a1ea33","pickleStepId":"96d0ac8b-6c98-4da2-a8fb-aecf0ff2d726","stepDefinitionIds":["7f7c2132-0db3-4e18-82b5-0566aec17b94"],"stepMatchArgumentsLists":[{}]},{"id":"4bec0f19-1795-4504-8554-3453da2e0b01","pickleStepId":"488b2b4b-41b7-47bb-a538-7ac179aef9d9","stepDefinitionIds":["aa411057-f444-43a1-8f86-128d2a51c768"],"stepMatchArgumentsLists":[{}]},{"id":"ade7f351-5805-41d9-a27f-f1bc199079cd","pickleStepId":"165a5
