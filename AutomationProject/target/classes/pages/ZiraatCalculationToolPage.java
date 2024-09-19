@@ -18,6 +18,14 @@ public class ZiraatCalculationToolPage {
         return driver.findElement(By.xpath("//*[@id=\"landingNav\"]/div[2]/div/div/div/div/div[1]/ul/li[1]/a"));
     }
 
+    public WebElement depositYieldCalculation(WebDriver driver){
+        return driver.findElement(By.xpath("//*[@id=\"landingNav\"]/div[3]/div[2]/div/h2/a"));
+    }
+
+    public WebElement ibanCalculation(WebDriver driver){
+        return driver.findElement(By.xpath("//*[@id=\"landingNav\"]/div[3]/div[3]/div/h2/a"));
+    }
+
 
 
 

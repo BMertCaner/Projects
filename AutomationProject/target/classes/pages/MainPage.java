@@ -2,6 +2,7 @@ package pages;
 
 //import io.cucumber.java.BeforeAll;
 import base.MainFactory;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -120,6 +121,11 @@ public class MainPage {
     }
 
     public static void sendKey(WebElement element,String key){
+        element.sendKeys(key);
+    }
+
+    public static void sendKeyboard(WebElement element,Keys key){
+        //element.sendKeys(Keys.ENTER);
         element.sendKeys(key);
     }
 
